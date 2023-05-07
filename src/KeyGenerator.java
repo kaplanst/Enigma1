@@ -32,7 +32,6 @@ public class KeyGenerator {
                 resAlf += arr[k][j];
             }
         }
-
         return resAlf;
     }
 }
