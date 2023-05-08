@@ -5,12 +5,14 @@ public class Encriptor {
     }
 
     public static String cript(String input, int key) {
+        String addCript = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
         String alf;
         alf = KeyGenerator.alfCreator(key);
         System.out.println("New alphabet:\n" + alf + "\n");
         System.out.println("Your digit key:\n" + key + "\n");
         System.out.println("Decoded text:\n" + input);
-        input = input.replaceAll("a", "!@" + key + "@!");
+        input = input.replaceAll("a", "!@" + key / (key % 100) + "@!");
         String output = "";
         String strKey = Integer.toString(key);
         int j = 0;

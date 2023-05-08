@@ -1,6 +1,6 @@
 public class Decoder {
     public static void main(String[] args) {
-        String message = "1B%x@h84XO%pQ\\`])rM>apMn}|9|AV8+NT8&6]Xr}nI@enM|iO9";
+        String message = "1B%x@h84XO%pQ\\`])nN<hqPm)])|J\\fB`\\2qQ|JrxtMDa|9Oi";
         int key = 65214525;
         System.out.println(decod(message, key));
     }
@@ -19,7 +19,7 @@ public class Decoder {
 
 
             decodeMessage += symbolDec(message.charAt(i), keyElement, alf);
-            decodeMessage = decodeMessage.replaceAll("!@" + key + "@!", "a");
+            decodeMessage = decodeMessage.replaceAll("!@" + key / (key % 100)+ "@!", "a");
 
         }
         return decodeMessage;
