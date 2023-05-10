@@ -1,7 +1,8 @@
 public class Encriptor {
 
     public static void main(String[] args) {
-        System.out.println("Encoded text:\n" + cript("Hello, World! Happy New year!", 65214525));
+        System.out.println("Encoded text:\n" + cript("We've accepted your return request. " +
+                "Once we receive the item below, we'll issue your refund.", 65214525));
     }
 
     public static String cript(String input, int key) {
@@ -22,7 +23,6 @@ public class Encriptor {
             if (j == strKey.length()) j = 0;
             output += symbol(input.charAt(i), key, alf);
         }
-
         return output;
     }
 

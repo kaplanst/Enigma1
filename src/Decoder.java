@@ -1,6 +1,6 @@
 public class Decoder {
     public static void main(String[] args) {
-        String message = "1B%x@h84XO%pQ\\`])nN<hqPm)])|J\\fB`\\2qQ|JrxtMDa|9Oi";
+        String message = "@B?#6\\9|zrHDetI|i@{qAQ}AhV(\"C\\+B]R+zPO}N^B,!^\\gKLB8$6\\+BLB\"#6\\-EN\\\"!6J8?NI($\\\\0BoI%,:P,RN\\2{FO8ONC.z5j\n";
         int key = 65214525;
         System.out.println(decod(message, key));
     }

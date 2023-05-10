@@ -1,12 +1,7 @@
 public class KeyGenerator {
 
-    public static void main(String[] args) {
-
-  //      System.out.println(alfCreator(953475));
-    }
-
     public static String alfCreator(int key) {
-        String alf = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+        String alf = Data.key();
         String resAlf = "";
         String strKey= Integer.toString(key);
         int keySum = 0;
