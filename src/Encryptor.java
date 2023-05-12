@@ -1,18 +1,18 @@
-public class Encriptor {
+public class Encryptor {
+//
+//    public static void main(String[] args) {
+//        System.out.println("Encoded text:\n" + cript("We've accepted your return request. " +
+//                "Once we receive the item below, we'll issue your refund.", 65214525));
+//    }
 
-    public static void main(String[] args) {
-        System.out.println("Encoded text:\n" + cript("We've accepted your return request. " +
-                "Once we receive the item below, we'll issue your refund.", 65214525));
-    }
-
-    public static String cript(String input, int key) {
-        String addCript = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    public static String crypt(String input, int key) {
+//        String addCript = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
         String alf;
         alf = KeyGenerator.alfCreator(key);
-        System.out.println("New alphabet:\n" + alf + "\n");
-        System.out.println("Your digit key:\n" + key + "\n");
-        System.out.println("Decoded text:\n" + input);
+//        System.out.println("New alphabet:\n" + alf + "\n");
+//        System.out.println("Your digit key:\n" + key + "\n");
+//        System.out.println("Decoded text:\n" + input);
         input = input.replaceAll("a", "!@" + key / (key % 100) + "@!");
         String output = "";
         String strKey = Integer.toString(key);
