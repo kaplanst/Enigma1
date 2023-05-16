@@ -18,7 +18,7 @@ public class Main {
             System.out.println("Input your digit key");
 
             key = scan.nextInt();
-            if (key == 0) System.out.println("Encoded text:\n" + text);
+            if (key <= 0) System.out.println("Encoded text:\n" + text);
                 else System.out.println("Encoded text:\n" + Encryptor.crypt(text, key));
         } else {
             System.out.println("Input encrypted text");
