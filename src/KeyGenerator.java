@@ -1,7 +1,7 @@
 public class KeyGenerator {
 
     public static String alfCreator(int key) {
-        String alf = Data.key();
+        String alf = KeyGenerator.key();
         String resAlf = "";
         String strKey= Integer.toString(key);
         int keySum = 0;
@@ -28,5 +28,12 @@ public class KeyGenerator {
             }
         }
         return resAlf;
+    }
+    public static String key(){
+        return " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+    }
+
+    public static String addCrypt(){
+        return "ra eaoi to";
     }
 }

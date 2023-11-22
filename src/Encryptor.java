@@ -1,15 +1,10 @@
 public class Encryptor {
-//
-//    public static void main(String[] args) {
-//        System.out.println("Encoded text:\n" + crypt("We've accepted your return request. " +
-//                "Once we receive the item below, we'll issue your refund.", 0));
-//    }
 
     public static String crypt(String input, int key) {
 
         String alf;
         alf = KeyGenerator.alfCreator(key);
-        String addCrypt = "ra eaoi to";
+        String addCrypt = KeyGenerator.addCrypt();
         String cryptLetter = "" + addCrypt.charAt(key%10);
         input = input.replaceAll(cryptLetter, "!@" + key / (key % 100) + "@!");
         String output = "";

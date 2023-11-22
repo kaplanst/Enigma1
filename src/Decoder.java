@@ -1,9 +1,4 @@
 public class Decoder {
-//    public static void main(String[] args) {
-//        String message = "@B?#6\\y@LB)!6A8Vi|JB`tMty|9\"C\\+B]R+zPO}N^B,!^\\gKLB8$6\\+BLB\"#6\\-EN\\\"!6J8?NI9LbrHt}tILQTD\\`B?x=\\\"P\\R},J]Xn~lPAhmX]^O8~6C.KMj";
-//        int key = 65214525;
-//        System.out.println(decod(message, key));
-//    }
 
     public static String decod(String message, int key) {
         String alf = KeyGenerator.alfCreator(key);
@@ -16,7 +11,7 @@ public class Decoder {
             if (j == strKey.length()) j = 0;
             decodeMessage += symbolDec(message.charAt(i), keyElement, alf);
         }
-        String addCrypt = "ra eaoi to";
+        String addCrypt = KeyGenerator.addCrypt();
         String cryptLetter = "" + addCrypt.charAt(key%10);
         decodeMessage = decodeMessage.replaceAll("!@" + key / (key % 100)+ "@!", cryptLetter);
         return decodeMessage;
